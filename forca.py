@@ -8,6 +8,17 @@ def jogar():
     acertou = False
 
     while(not enforcou and not acertou):
+        chute = input("Qual letra? ")
+        chute = chute.strip()
+
+        index = 0
+
+        for letra in palavra_secreta:
+            if(letra.upper() == chute.upper()):
+                print(f"Encontrei a letra {letra} na posição {index}")
+
+            index += 1
+
         print("Jogando...")
 
     print("Fim do jogo")
